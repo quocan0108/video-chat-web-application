@@ -6,24 +6,24 @@
 
     <section id="form-container">
 
-        <img id="logo" src="{% static 'images/chat-icon.png' %}"/>
+        <img id="logo" src="{% static 'images/chat-icon.png' %}" alt="Logo"/>
 
         <div id="welcome-message">
-            <h1>Welcome to MyChat</h1>
-            <p>A group video calling platform made just for you!</p>
+            <h1>Welcome to Video Chat Platform</h1>
+            <p>Experience high-quality group video calls, crafted just for you!</p>
         </div>
 
         <form id="form">
             <div class="field-wrapper">
 
                 <div class="form-field">
-                    <label>Room:</label>
-                    <input name="room" placeholder="Enter a room name..."  style="text-transform:uppercase"/>
+                    <label for="room">Room:</label>
+                    <input id="room" name="room" placeholder="Enter a room name..." />
                 </div>
 
                 <div class="form-field">
-                    <label>Name:</label>
-                    <input name="name" placeholder="Enter your name..."  style="text-transform:uppercase"/>
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" placeholder="Enter your name..." />
                 </div>
 
                 <div class="form-field">
@@ -56,10 +56,7 @@
         window.open('/room/', '_self')
     }
 
-
-
     form.addEventListener('submit', handleSubmit)
 </script>
 
 {% endblock content %}
-
